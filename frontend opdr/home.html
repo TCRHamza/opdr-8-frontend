@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <section class="container">
+        <nav>
+            <ul id="navbar">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#over-mij">Over mij</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fas fa-bars"></i>
+        </nav>
+        <section class="header-text">
+            <p>student aan het tcr</p>
+             <h1>student aan het tcr<span><br>Hamza Taha</span><br></h1>
+        </section>
+    </section>
+</header>
+
+<main>
+    <section id="over-mij">
+        <section class="container">
+            <article>
+                <section class="row">
+                    <section class="over-col-1">
+                        <img class="hmidoush" src="images/hamza.webp" alt="foto  van Hamza Taha">
+                    </section>
+                    <section class="over-col-2">
+                        <h2 class="sub-title">Over mij</h2>
+                        <p>Ik ben Hamza Taha en ik zit op het techniek college Rotterdam, de opleiding software development leerjaar 2. <br>
+                        Ik hou veel van voetballen en gamen.</p>
+                        <section class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Vaardigheden</p>
+                            <p class="tab-links" onclick="opentab('ervaring')">Werkervaring</p>
+                            <p class="tab-links" onclick="opentab('studie')">Studie</p>
+                            <p class="tab-links" onclick="opentab('project')">project</p>
+                        </section>
+                        <section class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Html en css</span><br>Website development</li>
+                                <li><span>Javascript</span><br>Website Development</li>
+                                <li><span>php en oop</span><br>Website development</li>
+                                <li><span>bezig met csharp als nieuwe codeer taal</span><br>Website development</li>
+                            </ul>
+                        </section>
+                        <section class="tab-contents" id="ervaring">
+                            <ul>
+                                <li><span>2018 - 2019</span><br>Stage gelopen jumbo als vulploegmedewerker. <br>
+                                nu werkend bij de jumbo zelf <br>
+                                ook een jaar in de lidl gewerkt als alround medewerker in 2021 tot 2022</li>
+                            </ul>
+                        </section>
+                        <section class="tab-contents" id="studie">
+                            <ul>
+                                <li><span>2022-heden</span><br>Software development leerjaar 2 leerzaam op het techniek college Rotterdam. 
+                                </li>
+                                <li><span>2017-2021</span><br>Vmbo-kader diploma behaald.</li>
+                            </ul>
+                        </section>
+                        <section class="tab-contents" id="project">
+                            <ul>
+                                <li><span></span><br> <a href="images/projectvideo.mp4" download class="btn btn2">video project</a>
+                                </li>
+                               
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <section id="doel">
+        <section class="container">
+            <h2 class="Laten-zien-title"></h2>
+            <section class="Laten-zien-list">
+                <section>
+                    <i class="fas fa-code"></i>
+                </section>
+                <section>
+                    <i class="fab fa-xbox"></i>
+                    <h3></h3>
+                    <p></p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id="contact">
+        <section class="container">
+            <article class="row">
+                <section class="contact-left">
+                    <h2 class="sub-title">Neem contact met mij op</h2>
+                    <p><i class="fas fa-paper-plane"></i> Hamzataha1101@outlook.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 31-0641449847</p>
+                    <section class="social-icons">
+                        <a href="images/hamzacv.pdf" download class="btn btn2">Download mijn CV</a>
+                        <a href="https://github.com/TCRHamza" download class="btn btn2">github</a>
+                        <a href="https://www.linkedin.com/in/hamza-taha-432a2526b/"download class= "btn btn2">linkedin</a> 
+                    </section>
+                </section>
+            </article>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <section class="container">
+        <section class="copyright">
+            <p>Copyright © gemaakt door Hamza Taha </p>
+        </section>
+    </section>
+</footer>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    window.onscroll = function() {myFunction()};
+   
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+   
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+</script>
+</body>
+</html>
